@@ -1,0 +1,23 @@
+<form [formGroup]="productForm" >
+        <div class="form-group" (click)="save()">
+
+           <label>ID:</label>
+           <input class="form-control" type="number" formControlName="id">
+          
+       
+           <label>Title:</label>
+           <input class="form-control" type="text" formControlName="title">
+       ²
+           <label>Price:</label>
+           <input class="form-control" type="number" formControlName="price">
+       
+           <label>Quantity:</label>
+           <input class="form-control" type="number" formControlName="quantity">
+       
+           <label>Likes:</label>
+           <input class="form-control" type="number" formControlName="like">
+       
+           <button class="btn btn-success" type="submit" value="Save" [disabled]="productForm.invalid">Save</button>
+        </div>
+       </form>
+       

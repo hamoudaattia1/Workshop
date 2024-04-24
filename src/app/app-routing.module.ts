@@ -8,6 +8,7 @@ import { ResidenceComponent } from './residence/residence.component';
 import { ApartementComponent } from './apartement/apartement.component';
 import { FormComponent } from './form/form.component';
 import { FormappartmentComponent } from './formappartment/formappartment.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   // path par defaut
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path : 'residence' ,  component : ResidenceComponent},
   {path : 'login' ,  component : FormComponent},
   {path : 'formappartment' ,  component : FormappartmentComponent},
+  {path : 'addProduct' ,  component : AddProductComponent},
 
 // route parametré
   {path : 'detail/:id', component: DetailProductComponent},

@@ -1,0 +1,24 @@
+{
+  "posts": [
+    
+      {
+        "id": 1,
+       "title": "hamouda",
+        "price": 5,
+        "quantity": 8,
+        "like": 8
+      }
+      
+    
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
