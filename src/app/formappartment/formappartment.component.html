@@ -1,0 +1,65 @@
+<div [formGroup]="apartForm">
+    <div>
+      <label for="apartmentNumber">Apartment Number:</label>
+      <input type="text" id="apartmentNumber" formControlName="apartmentNumber">
+      <div *ngIf="apartForm.get('apartmentNumber')?.errors?.['required']" class="error-message">
+      </div>
+      <div *ngIf="apartForm.get('apartmentNumber')?.errors?.['pattern']" class="error-message">
+        Please enter a valid number.
+      </div>
+    </div>
+    
+    <div>
+      <label for="floorNumber">Floor Number:</label>
+      <input type="text" id="floorNumber" formControlName="floorNumber">
+      <div *ngIf="apartForm.get('floorNumber')?.errors?.['required']" class="error-message">
+      </div>
+      <div *ngIf="apartForm.get('floorNumber')?.errors?.['pattern']" class="error-message">
+        Please enter a valid number.
+      </div>
+    </div>
+    
+    <div>
+      <label for="surface">Surface:</label>
+      <input type="text" id="surface" formControlName="surface">
+      <div *ngIf="apartForm.get('surface')?.errors?.['required']" class="error-message">
+        Surface is required.
+      </div>
+    </div>
+    
+    <div>
+        <label for="surface">Terrace</label>
+        <input type="text" id="surface" formControlName="surface">
+        <div *ngIf="apartForm.get('surface')?.errors?.['required']" class="error-message">
+          
+        </div>
+      </div>
+    
+    <div>
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category">
+        <option value="">Select</option>
+        <option value="S+1">S+1</option>
+        <option value="S+2">S+2</option>
+        <option value="S+3">S+3</option>
+      </select>
+      <div *ngIf="apartForm.get('category')?.errors?.['required']" class="error-message">
+       
+      </div>
+    </div>
+    
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      <div *ngIf="apartForm.get('description')?.errors?.['required']" class="error-message">
+      </div>
+      <div *ngIf="apartForm.get('description')?.errors?.['minlength']" class="error-message">
+        Description should be at least 10 characters long.
+      </div>
+    </div>
+    
+    <div>
+      <button [disabled]="apartForm.invalid" (click)="onSubmit()">Add</button>
+    </div>
+  </div>
+  
